@@ -78,7 +78,7 @@ export const projects: Project[] = [
     problem: "Detalle pendiente de agregar.",
     what: "Diseño de logo.",
     result: null,
-    image: "/projects/logo-cocina-oculta.png",
+    image: "/projects/logo-cocina-oculta.jpg",
   },
   {
     id: "logo-la-tia-elvia",
@@ -90,7 +90,7 @@ export const projects: Project[] = [
     problem: "Detalle pendiente de agregar.",
     what: "Diseño de logo.",
     result: null,
-    image: "/projects/logo-la-tia-elvia.png",
+    image: "/projects/logo-la-tia-elvia.jpg",
   },
   {
     id: "logo-tyson-billar",
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     problem: "Detalle pendiente de agregar.",
     what: "Diseño de logo.",
     result: null,
-    image: "/projects/logo-tyson-billar.png",
+    image: "/projects/logo-tyson-billar.jpg",
   },
   {
     id: "logo-wendy-eventos",
@@ -114,7 +114,7 @@ export const projects: Project[] = [
     problem: "Detalle pendiente de agregar.",
     what: "Diseño de logo.",
     result: null,
-    image: "/projects/logo-wendy-eventos.png",
+    image: "/projects/logo-wendy-eventos.jpg",
   },
   {
     id: "logo-la-cuadra",
@@ -126,7 +126,7 @@ export const projects: Project[] = [
     problem: "Detalle pendiente de agregar.",
     what: "Diseño de logo.",
     result: null,
-    image: "/projects/logo-la-cuadra.png",
+    image: "/projects/logo-la-cuadra.jpg",
   },
   {
     id: "logo-pundi-barber",
@@ -138,7 +138,7 @@ export const projects: Project[] = [
     problem: "Detalle pendiente de agregar.",
     what: "Diseño de logo.",
     result: null,
-    image: "/projects/logo-pundi-barber.png",
+    image: "/projects/logo-pundi-barber.jpg",
   },
 
   // Video

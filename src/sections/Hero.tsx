@@ -62,7 +62,7 @@ export default function Hero() {
           <div className="relative z-10 mx-auto w-full max-w-sm sm:mx-0 sm:ml-auto">
             <div className="relative aspect-[3/4] w-full overflow-hidden border border-line bg-surface">
               <img
-                src="/portrait.png"
+                src="/portrait.jpg"
                 alt={profile.fullName}
                 className="h-full w-full object-cover object-top grayscale"
               />
