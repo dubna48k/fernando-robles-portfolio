@@ -4,3 +4,7 @@ dist-ssr
 *.local
 .env
 .env.*
+
+# assets originales ya copiados a public/, no hace falta versionarlos dos veces
+personal.png
+proyectos-portafolio/

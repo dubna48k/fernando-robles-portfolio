@@ -1,5 +1,4 @@
 import { profile } from "../data/profile";
-import PortraitPlaceholder from "../components/PortraitPlaceholder";
 
 export default function Hero() {
   return (
@@ -61,7 +60,14 @@ export default function Hero() {
           </div>
 
           <div className="relative z-10 mx-auto w-full max-w-sm sm:mx-0 sm:ml-auto">
-            <PortraitPlaceholder className="aspect-[3/4] w-full" />
+            <div className="relative aspect-[3/4] w-full overflow-hidden border border-line bg-surface">
+              <img
+                src="/portrait.png"
+                alt={profile.fullName}
+                className="h-full w-full object-cover object-top grayscale"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(224,0,0,0.35)_100%)]" />
+            </div>
             <div className="absolute -left-6 top-6 hidden max-w-[9rem] items-start gap-2 border border-line bg-ink/80 p-3 text-[11px] leading-snug text-paper/70 backdrop-blur sm:flex">
               <span className="text-accent">✦</span>
               {profile.pitch}
