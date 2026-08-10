@@ -1,11 +1,11 @@
 import { education, skillList, workProcess } from "../data/skills";
+import Reveal from "../components/Reveal";
 
 export default function About() {
   return (
     <section id="about" className="border-b border-line px-6 py-24 sm:px-10">
       <div className="mx-auto grid max-w-6xl gap-16 lg:grid-cols-2">
-        {/* Educación & Habilidades */}
-        <div>
+        <Reveal>
           <h2 className="font-condensed text-3xl uppercase tracking-tight sm:text-4xl">
             Educación <span className="text-accent">&amp; Habilidades</span>
           </h2>
@@ -29,24 +29,26 @@ export default function About() {
               {skillList.map((skill) => (
                 <span
                   key={skill}
-                  className="border border-line px-3 py-1.5 text-[11px] uppercase tracking-wide text-paper/70"
+                  className="glass glass-hover px-3 py-1.5 text-[11px] uppercase tracking-wide text-paper/80"
                 >
                   {skill}
                 </span>
               ))}
             </div>
           </div>
-        </div>
+        </Reveal>
 
-        {/* Proceso de trabajo */}
-        <div>
+        <Reveal delay={0.1}>
           <h2 className="font-condensed text-3xl uppercase tracking-tight sm:text-4xl">
             Proceso <span className="text-accent">de Trabajo</span>
           </h2>
 
-          <div className="mt-8 space-y-6">
+          <div className="mt-8 space-y-4">
             {workProcess.map((step) => (
-              <div key={step.number} className="flex gap-5 border-b border-line pb-6">
+              <div
+                key={step.number}
+                className="glass glass-hover flex gap-5 p-4"
+              >
                 <span className="font-condensed text-2xl text-accent">{step.number}</span>
                 <div>
                   <h3 className="text-sm font-semibold uppercase tracking-wide">
@@ -57,7 +59,7 @@ export default function About() {
               </div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

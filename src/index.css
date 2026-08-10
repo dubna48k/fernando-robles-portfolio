@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Anton&family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700&family=Caveat:wght@500;600;700&family=Anton&family=Inter:wght@400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme {
   --font-display: "Fraunces", "Georgia", serif;
+  --font-script: "Caveat", cursive;
   --font-condensed: "Anton", "Arial Narrow", sans-serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "Inter", -apple-system, "SF Pro Display", system-ui, sans-serif;
 
   --color-ink: #050505;
   --color-surface: #0d0d0d;
@@ -24,6 +25,7 @@ body {
   color: var(--color-paper);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.01em;
 }
 
 ::selection {
@@ -35,6 +37,38 @@ body {
   font-family: var(--font-display);
 }
 
+.font-script {
+  font-family: var(--font-script);
+}
+
 .font-condensed {
   font-family: var(--font-condensed);
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-hover {
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(224, 0, 0, 0.35);
+  box-shadow: 0 0 24px rgba(224, 0, 0, 0.18), 0 0 2px rgba(224, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Neon accent glow */
+.neon-text {
+  text-shadow: 0 0 12px rgba(224, 0, 0, 0.55), 0 0 32px rgba(224, 0, 0, 0.25);
+}
+
+.neon-border {
+  box-shadow: 0 0 0 1px rgba(224, 0, 0, 0.35), 0 0 20px rgba(224, 0, 0, 0.15);
 }

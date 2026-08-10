@@ -1,4 +1,5 @@
 import { profile } from "../data/profile";
+import Reveal from "../components/Reveal";
 
 export default function Hero() {
   return (
@@ -26,8 +27,8 @@ export default function Hero() {
         </h2>
 
         <div className="relative -mt-[16vw] grid gap-8 pb-16 sm:-mt-40 sm:grid-cols-[1.1fr_0.9fr] sm:items-end sm:gap-10 sm:pb-20">
-          <div className="relative z-10">
-            <p className="font-display text-xl italic text-paper/80">Hola, soy</p>
+          <Reveal className="relative z-10">
+            <p className="font-script text-4xl text-paper drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)] sm:text-5xl">Hola, soy</p>
             <h1 className="mt-1 font-condensed text-[15vw] uppercase leading-[0.85] tracking-tight sm:text-7xl">
               {profile.firstName}
               <br />
@@ -46,7 +47,7 @@ export default function Hero() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#work"
-                className="rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-wide text-paper transition hover:bg-paper hover:text-ink"
+                className="rounded-full bg-accent px-6 py-3 text-xs font-semibold uppercase tracking-wide text-paper transition hover:bg-paper hover:text-ink hover:shadow-[0_0_24px_rgba(224,0,0,0.5)]"
               >
                 Ver portfolio
               </a>
@@ -57,9 +58,9 @@ export default function Hero() {
                 Hablemos
               </a>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="relative z-10 mx-auto w-full max-w-sm sm:mx-0 sm:ml-auto">
+          <Reveal delay={0.15} className="relative z-10 mx-auto w-full max-w-sm sm:mx-0 sm:ml-auto">
             <div className="relative aspect-[3/4] w-full overflow-hidden border border-line bg-surface">
               <img
                 src="/portrait.jpg"
@@ -68,11 +69,11 @@ export default function Hero() {
               />
               <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(224,0,0,0.35)_100%)]" />
             </div>
-            <div className="absolute -left-6 top-6 hidden max-w-[9rem] items-start gap-2 border border-line bg-ink/80 p-3 text-[11px] leading-snug text-paper/70 backdrop-blur sm:flex">
+            <div className="absolute -left-6 top-6 hidden max-w-[9rem] items-start gap-2 border border-white/10 bg-ink/85 p-3 text-[11px] leading-snug text-paper/90 backdrop-blur-md sm:flex">
               <span className="text-accent">✦</span>
               {profile.pitch}
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

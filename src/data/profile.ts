@@ -13,6 +13,4 @@ export const profile = {
   whatsappHref: "https://wa.me/573016742094",
   phoneCallDisplay: "+57 311 644 3030",
   email: "robles9301@gmail.com",
-  // [COMPLETAR]: reemplaza por tu dominio real cuando lo tengas (ej. fernandorobles.co)
-  portfolioUrl: "fernando-robles.vercel.app",
 };

@@ -1,5 +1,6 @@
 import type { Project } from "../data/projects";
 import PlaceholderMedia from "./PlaceholderMedia";
+import LiveSitePreview from "./LiveSitePreview";
 
 interface Props {
   project: Project;
@@ -8,7 +9,12 @@ interface Props {
 }
 
 export default function ProjectCard({ project, index, onOpen }: Props) {
-  const media = project.image ? (
+  const media = project.liveUrl ? (
+    <LiveSitePreview
+      url={project.liveUrl}
+      className="h-full w-full transition duration-500 group-hover:scale-[1.02]"
+    />
+  ) : project.image ? (
     <img
       src={project.image}
       alt={project.name}
@@ -47,7 +53,7 @@ export default function ProjectCard({ project, index, onOpen }: Props) {
         href={project.link}
         target="_blank"
         rel="noreferrer"
-        className="group block text-left w-full"
+        className="group glass-hover block rounded-sm text-left w-full"
       >
         <div className="aspect-[4/3] w-full overflow-hidden border border-line">{media}</div>
         {footer}
@@ -56,7 +62,7 @@ export default function ProjectCard({ project, index, onOpen }: Props) {
   }
 
   return (
-    <button onClick={() => onOpen(project)} className="group text-left w-full">
+    <button onClick={() => onOpen(project)} className="group glass-hover rounded-sm text-left w-full">
       <div className="aspect-[4/3] w-full overflow-hidden border border-line">{media}</div>
       {footer}
     </button>
