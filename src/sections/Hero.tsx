@@ -61,13 +61,16 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={0.15} className="relative z-10 mx-auto w-full max-w-sm sm:mx-0 sm:ml-auto">
-            <div className="relative aspect-[3/4] w-full overflow-hidden border border-line bg-surface">
+            <div className="relative aspect-[3/4] w-full">
               <img
-                src="/portrait.jpg"
+                src="/portrait.png"
                 alt={profile.fullName}
-                className="h-full w-full object-cover object-top grayscale"
+                className="h-full w-full object-contain object-bottom grayscale"
+                style={{
+                  maskImage: "linear-gradient(180deg, black 0%, black 62%, transparent 96%)",
+                  WebkitMaskImage: "linear-gradient(180deg, black 0%, black 62%, transparent 96%)",
+                }}
               />
-              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_55%,rgba(224,0,0,0.35)_100%)]" />
             </div>
             <div className="absolute -left-6 top-6 hidden max-w-[9rem] items-start gap-2 border border-white/10 bg-ink/85 p-3 text-[11px] leading-snug text-paper/90 backdrop-blur-md sm:flex">
               <span className="text-accent">✦</span>

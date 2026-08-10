@@ -9,6 +9,33 @@ interface Props {
 }
 
 export default function ProjectCard({ project, index, onOpen }: Props) {
+  // Sin imagen ni preview en vivo: enlace directo compacto, sin card vacía.
+  if (project.link && !project.image && !project.liveUrl) {
+    return (
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noreferrer"
+        className="group glass glass-hover flex items-center gap-4 px-5 py-4"
+      >
+        <span className="font-condensed text-2xl text-accent">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+        <div className="flex-1">
+          <h3 className="font-condensed text-base uppercase leading-snug text-paper">
+            {project.name}
+          </h3>
+          <p className="mt-0.5 text-[11px] uppercase tracking-[0.14em] text-paper/50">
+            {project.category}
+          </p>
+        </div>
+        <span className="shrink-0 text-lg text-accent transition group-hover:translate-x-1">
+          ↗
+        </span>
+      </a>
+    );
+  }
+
   const media = project.liveUrl ? (
     <LiveSitePreview
       url={project.liveUrl}

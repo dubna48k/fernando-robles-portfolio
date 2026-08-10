@@ -31,30 +31,6 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
-    id: "litoempaque-piezas",
-    name: "Piezas gráficas — Litoempaque América",
-    category: "Diseño gráfico",
-    client: "Litoempaque América",
-    year: "[COMPLETAR]",
-    description: "Diseño de piezas gráficas para producción e impresión.",
-    problem: "Detalle pendiente de agregar.",
-    what: "Diseño y ajuste de piezas gráficas para impresión, siguiendo estándares técnicos de producción.",
-    result: null,
-    image: null,
-  },
-  {
-    id: "postobon-tat",
-    name: "Desarrollo de marca en punto de venta",
-    category: "Branding",
-    client: "Postobón (vía IPAL)",
-    year: "[COMPLETAR]",
-    description: "Desarrollo de marca y negociación directa en punto de venta.",
-    problem: "Detalle pendiente de agregar.",
-    what: "Gestión de presencia de marca en terreno y negociación con clientes.",
-    result: null,
-    image: null,
-  },
   // Web — sitios en producción, preview en vivo
   {
     id: "web-printspros",
