@@ -1,15 +1,17 @@
 import { useMemo, useState } from "react";
-import { categories, projects, type Project, type ProjectCategory } from "../data/projects";
+import { categories, type Project, type ProjectCategory } from "../data/projects";
+import { useProjects } from "../data/useProjects";
 import ProjectCard from "../components/ProjectCard";
 import ProjectModal from "../components/ProjectModal";
 
 export default function SelectedWork() {
+  const { projects, loading } = useProjects();
   const [active, setActive] = useState<ProjectCategory | "Todos">("Todos");
   const [open, setOpen] = useState<Project | null>(null);
 
   const filtered = useMemo(
     () => (active === "Todos" ? projects : projects.filter((p) => p.category === active)),
-    [active]
+    [active, projects]
   );
 
   return (
@@ -41,11 +43,15 @@ export default function SelectedWork() {
           ))}
         </div>
 
-        <div className="mt-12 grid grid-cols-1 items-start gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((p, i) => (
-            <ProjectCard key={p.id} project={p} index={i} onOpen={setOpen} />
-          ))}
-        </div>
+        {loading ? (
+          <p className="mt-12 text-sm text-paper/40">Cargando proyectos…</p>
+        ) : (
+          <div className="mt-12 grid grid-cols-1 items-start gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+            {filtered.map((p, i) => (
+              <ProjectCard key={p.id} project={p} index={i} onOpen={setOpen} />
+            ))}
+          </div>
+        )}
       </div>
 
       <ProjectModal project={open} onClose={() => setOpen(null)} />

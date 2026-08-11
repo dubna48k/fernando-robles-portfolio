@@ -68,7 +68,7 @@ export default function Hero() {
                 className="h-full w-full object-contain object-bottom grayscale"
               />
             </div>
-            <div className="absolute -left-6 top-6 hidden max-w-[9rem] items-start gap-2 border border-white/10 bg-ink/85 p-3 text-[11px] leading-snug text-paper/90 backdrop-blur-md sm:flex">
+            <div className="absolute -left-6 bottom-24 hidden max-w-[9rem] items-start gap-2 border border-white/10 bg-ink/85 p-3 text-[11px] leading-snug text-paper/90 backdrop-blur-md sm:flex">
               <span className="text-accent">✦</span>
               {profile.pitch}
             </div>

@@ -8,3 +8,8 @@ dist-ssr
 # assets originales ya copiados a public/, no hace falta versionarlos dos veces
 personal.png
 proyectos-portafolio/
+
+# API del CMS
+server/node_modules
+server/uploads/*
+!server/uploads/.gitkeep
