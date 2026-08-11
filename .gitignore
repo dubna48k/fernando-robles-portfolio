@@ -13,3 +13,4 @@ proyectos-portafolio/
 server/node_modules
 server/uploads/*
 !server/uploads/.gitkeep
+server/.env
