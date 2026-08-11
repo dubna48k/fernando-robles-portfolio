@@ -10,10 +10,8 @@
 export type ProjectCategory =
   | "Branding"
   | "Social Media"
-  | "Diseño gráfico"
   | "Video"
-  | "Web"
-  | "Campañas";
+  | "Web";
 
 export interface Project {
   id: string;
@@ -291,8 +289,6 @@ export const projects: Project[] = [
 export const categories: ProjectCategory[] = [
   "Branding",
   "Social Media",
-  "Diseño gráfico",
   "Video",
   "Web",
-  "Campañas",
 ];
