@@ -54,9 +54,9 @@ export const projects: Project[] = [
     problem: "",
     what: "",
     result: null,
-    image: null,
+    // El sitio bloquea el embebido en iframe (CSP), se usa una captura real en su lugar
+    image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fpromotorainternacionaldeportiva.com%2F?w=1200",
     link: "https://promotorainternacionaldeportiva.com/",
-    liveUrl: "https://promotorainternacionaldeportiva.com/",
   },
   {
     id: "web-emunah",
@@ -82,9 +82,9 @@ export const projects: Project[] = [
     problem: "",
     what: "",
     result: null,
-    image: null,
+    // El sitio bloquea el embebido en iframe (CSP), se usa una captura real en su lugar
+    image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fshadowscale.pro%2F?w=1200",
     link: "https://shadowscale.pro/",
-    liveUrl: "https://shadowscale.pro/",
   },
   {
     id: "web-daathstudio",
@@ -96,9 +96,9 @@ export const projects: Project[] = [
     problem: "",
     what: "",
     result: null,
-    image: null,
+    // El sitio bloquea el embebido en iframe (CSP), se usa una captura real en su lugar
+    image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fdaathstudio.com%2F?w=1200",
     link: "https://daathstudio.com/",
-    liveUrl: "https://daathstudio.com/",
   },
   {
     id: "web-aleboutique",
@@ -124,9 +124,9 @@ export const projects: Project[] = [
     problem: "",
     what: "",
     result: null,
-    image: null,
+    // El sitio bloquea el embebido en iframe (CSP), se usa una captura real en su lugar
+    image: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fperdomofotografia.com%2F?w=1200",
     link: "https://perdomofotografia.com/",
-    liveUrl: "https://perdomofotografia.com/",
   },
 
   // Branding / diseño de marca
